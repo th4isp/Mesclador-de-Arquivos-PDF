@@ -14,23 +14,6 @@
 2. **Execute o script** para combinar todos os PDFs na pasta.
 3. **Encontre o PDF final** como `PDF Final.pdf` no diretório de trabalho.
 
-```python
-import PyPDF2
-import os
-
-merger = PyPDF2.PdfMerger()
-
-lista_arquivos = os.listdir("arquivos")
-lista_arquivos.sort()
-print(lista_arquivos)
-
-for arquivo in lista_arquivos:
-    if ".pdf" in arquivo:
-        merger.append(f"arquivos/{arquivo}")
-
-merger.write("PDF Final.pdf")
-```
-
 ## 📦 Requisitos
 
 - `PyPDF2`: Instale com `pip install PyPDF2`
